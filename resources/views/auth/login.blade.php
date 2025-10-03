@@ -82,7 +82,7 @@
                     <div class="text-center mt-4">
                         <small class="text-muted">
                             ¿No tienes una cuenta? 
-                            <a href="#" class="text-decoration-none">Regístrate aquí</a>
+                            <a href="/register" class="text-decoration-none">Regístrate aquí</a>
                         </small>
                     </div>
                 </div>
