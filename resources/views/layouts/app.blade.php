@@ -14,9 +14,13 @@
     <style>
         .login-container {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
+            background-image: url('/img/bg-poly.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }   
+
         .login-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
