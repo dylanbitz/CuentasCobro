@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
-class CrearUsuario extends Controller
+class CrearUsuario
 {
     public function showRegistrationForm()
     {
