@@ -21,6 +21,7 @@ Route::post('/register', [CrearUsuario::class, 'register']);
 // Rutas protegidas por autenticación
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+    Route::get('/cuentas-cobro', [AuthController::class, 'cuentasCobro'])->name('cuentas-cobro');
 });
 
 // Solicitar email para recuperación (Formulario + POST)

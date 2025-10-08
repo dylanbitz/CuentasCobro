@@ -41,6 +41,11 @@ class AuthController
         return view('dashboard');
     }
 
+    public function cuentasCobro()
+    {
+        return view('cuentasCobro.inicio');
+    }
+
     // Procesar logout
     public function logout(Request $request)
     {
