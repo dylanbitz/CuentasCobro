@@ -3,8 +3,32 @@
   border-top-right-radius: .3rem;
   border-bottom-right-radius: .3rem;
 }
+
 @media (min-width: 768px) {
   .gradient-form {
     height: 100vh !important;
   }
+
+  /* Asegura que las columnas estén lado a lado en pantallas medianas y grandes */
+  .login-row {
+    display: flex;
+    align-items: stretch;
+  }
 }
+
+/* Para pantallas pequeñas, permite el apilamiento vertical */
+@media (max-width: 767px) {
+  .col-md-6 {
+    margin-bottom: 1rem;
+  }
+}
+.btn-outline-light {
+  transition: 0.2s;
+}
+.btn-outline-light:hover, .btn-outline-light:focus {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 10px #fff3;
+}
+

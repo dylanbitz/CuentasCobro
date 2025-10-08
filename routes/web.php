@@ -22,3 +22,20 @@ Route::post('/register', [CrearUsuario::class, 'register']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 });
+
+// Solicitar email para recuperación (Formulario + POST)
+Route::get('/forgot-password', function () {
+    return view('auth.passwords.EnviarPassword');
+})->name('password.request');
+
+
+Route::post('/forgot-password', [AuthController::class, 'sendResetLink'])->name('password.email');
+
+// Formulario para restablecer (token + email en url)
+Route::get('/reset-password/{token}', function ($token) {
+    $email = request('email');
+    return view('auth.ReiniciarPassword', compact('token', 'email'));
+})->name('password.reset');
+
+Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('password.update');
+
