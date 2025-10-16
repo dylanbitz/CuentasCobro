@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+//use App\Models\User;
 
 class CrearUsuario
 {
@@ -22,7 +22,7 @@ class CrearUsuario
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $user = User::create([
+        $user = \App\Models\User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
