@@ -20,10 +20,10 @@ class AuthController
     {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required',
+            'contrasenia' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'contrasenia');
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();

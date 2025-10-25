@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-//use App\Models\User;
+use App\Models\User;
 
 class CrearUsuario
 {
@@ -17,18 +17,18 @@ class CrearUsuario
     public function register(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'nombre' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:usuarios',
+            'contrasenia' => 'required|string|min:8|confirmed',
         ]);
 
-        $user = \App\Models\User::create([
-            'name' => $request->name,
+        $usuario = User::create([
+            'nombre' => $request->nombre,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'contrasenia' => Hash::make($request->contrasenia),
         ]);
 
-        Auth::login($user);
+        Auth::login($usuario);
 
         return redirect('/dashboard');
     }
