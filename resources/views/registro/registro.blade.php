@@ -49,16 +49,16 @@
                         @csrf
                         
                         <div class="mb-3">
-                            <label for="name" class="form-label">
+                            <label for="nombre" class="form-label">
                                 <i class="fas fa-user me-1"></i>Nombre
                             </label>
                             <input type="text" 
-                                   class="form-control @error('name') is-invalid @enderror" 
-                                   id="name" 
-                                   name="name" 
-                                   value="{{ old('name') }}" 
+                                   class="form-control @error('nombre') is-invalid @enderror" 
+                                   id="nombre" 
+                                   name="nombre" 
+                                   value="{{ old('nombre') }}" 
                                    required 
-                                   autocomplete="name" 
+                                   autocomplete="nombre" 
                                    autofocus
                                    placeholder="Ingresa tu nombre">
                             @error('name')
@@ -88,15 +88,15 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="password" class="form-label">
+                            <label for="contrasenia" class="form-label">
                                 <i class="fas fa-lock me-1"></i>Contraseña
                             </label>
-                            <input type="password" 
-                                   class="form-control @error('password') is-invalid @enderror" 
-                                   id="password" 
-                                   name="password" 
+                            <input type="contrasenia" 
+                                   class="form-control @error('contrasenia') is-invalid @enderror" 
+                                   id="contrasenia" 
+                                   name="contrasenia" 
                                    required 
-                                   autocomplete="new-password"
+                                   autocomplete="new-contrasenia"
                                    placeholder="Ingresa tu contraseña">
                             @error('password')
                                 <div class="invalid-feedback">
@@ -106,15 +106,15 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="password_confirmation" class="form-label">
+                            <label for="contrasenia_confirmation" class="form-label">
                                 <i class="fas fa-lock me-1"></i>Repetir Contraseña
                             </label>
-                            <input type="password" 
+                            <input type="contrasenia" 
                                    class="form-control @error('password_confirmation') is-invalid @enderror" 
-                                   id="password_confirmation" 
-                                   name="password_confirmation" 
+                                   id="contrasenia_confirmation" 
+                                   name="contrasenia_confirmation" 
                                    required 
-                                   autocomplete="new-password"
+                                   autocomplete="new-contrasenia"
                                    placeholder="Repite tu contraseña">
                             @error('password_confirmation')
                                 <div class="invalid-feedback">
